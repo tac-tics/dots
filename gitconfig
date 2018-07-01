@@ -1,0 +1,19 @@
+[user]
+    name = Michael Maloney
+    email = tac@tac-tics.net
+
+[core]
+    editor = vim
+
+[alias]
+    graph = log --graph --decorate
+    undo = reset --soft HEAD~
+
+[apply]
+    whitespace = nowarn
+
+[push]
+    default = simple
+
+[pull]
+    ff = only
