@@ -1,0 +1,11 @@
+function activate {
+    if [ -f bin/activate ]; then
+        source bin/activate
+    elif [ -f env/bin/activate ]; then
+        source env/bin/activate
+    else
+        echo "No virtualenvironment found"
+    fi
+}
+
+export MYPYPATH=$HOME/projects/mypy-data/numpy-mypy
