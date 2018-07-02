@@ -1,12 +1,14 @@
 #!/bin/bash
 
 # bash
+mkdir -p $HOME/.bash
+cp -r bash/* $HOME/.bash/
 cp bashrc $HOME/.bashrc
-cp -r bash $HOME/.bash
 
 # vim
+mkdir -p $HOME/.vim
+cp -r vim/* $HOME/.vim/
 cp vimrc $HOME/.vimrc
-cp -r vim $HOME/.vim
 
 # git
 cp gitconfig $HOME/.gitconfig
