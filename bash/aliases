@@ -1,1 +1,5 @@
 alias sshfs-data='sshfs rainbox:/data /data'
+
+ORANGE="\[\033[0;33m\]"
+RESET="\[\033[0m\]"
+alias mkenv="virtualenv -p python3 env --prompt='${ORANGE}(${PWD##*/})${RESET}'"
