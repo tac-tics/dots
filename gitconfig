@@ -1,6 +1,6 @@
 [user]
     name = Michael Maloney
-    email = tac@tac-tics.net
+    # email = tac@tac-tics.net
 
 [core]
     editor = vim
