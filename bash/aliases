@@ -1,9 +1,1 @@
 alias sshfs-data='sshfs rainbox:/data /data'
-
-function mkvirtualenv() {
-    local ORANGE="\[\033[0;33m\]"
-    local RESET="\[\033[0m\]"
-    local DIRNAME=${PWD##*/}
-    virtualenv -p python3 env --prompt="${ORANGE}($DIRNAME)${RESET}"
-    source env/bin/activate
-}
