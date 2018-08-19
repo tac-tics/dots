@@ -1,3 +1,4 @@
 PATH=${PATH:+$PATH:}$HOME/.cargo/bin
+PATH=${PATH:+$PATH:}$HOME/.local/bin
 
 export PATH
