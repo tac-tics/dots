@@ -8,7 +8,6 @@ cp bashrc $HOME/.bashrc
 # vim
 mkdir -p $HOME/.vim
 cp -r vim/* $HOME/.vim/
-cp vimrc $HOME/.vimrc
 
 # git
 cp gitconfig $HOME/.gitconfig

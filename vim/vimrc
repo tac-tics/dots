@@ -1,0 +1,46 @@
+call pathogen#infect()
+syntax on
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" TABS 
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set smarttab
+set expandtab
+set nobackup
+set nowritebackup
+
+filetype on
+filetype plugin indent on
+
+autocmd Filetype xml setlocal autoindent nocindent nosmartindent indentexpr=
+autocmd Filetype html setlocal autoindent nocindent nosmartindent indentexpr=
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" HISTORY
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set viminfo='1000,f1,\"500
+
+augroup resCur
+    autocmd!
+    autocmd BufReadPost * call setpos(".", getpos("'\""))
+augroup END
+
+set undofile
+set undodir=$HOME/.vim/undo
+set undolevels=1000
+set undoreload=10000
+
+
+" runtime! config/tabs.vim
+" runtime! config/history.vim
+" runtime! config/functions.vim
+" runtime! config/lineno.vim
+" runtime! config/keybinds.vim
