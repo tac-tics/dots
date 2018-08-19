@@ -12,3 +12,6 @@ cp vimrc $HOME/.vimrc
 
 # git
 cp gitconfig $HOME/.gitconfig
+
+# command line completion
+cp inputrc $HOME/.inputrc
