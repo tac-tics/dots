@@ -44,3 +44,11 @@ set undoreload=10000
 " runtime! config/functions.vim
 " runtime! config/lineno.vim
 " runtime! config/keybinds.vim
+
+augroup MikeAutocommands
+    autocmd!
+    autocmd VimResized * execute "normal! \<c-w>="
+augroup end
+
+hi StatusLine cterm=reverse ctermfg=3 ctermbg=7 gui=none
+hi StatusLineNC cterm=reverse ctermfg=0 ctermbg=7 gui=none
