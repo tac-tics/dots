@@ -3,6 +3,8 @@ function activate {
         source bin/activate
     elif [ -f .env/bin/activate ]; then
         source .env/bin/activate
+    elif [ -f .pyenv/bin/activate ]; then
+        source .pyenv/bin/activate
     else
         echo "No virtualenvironment found"
     fi
@@ -12,8 +14,8 @@ function mkvirtualenv() {
     local ORANGE="\[\033[0;33m\]"
     local RESET="\[\033[0m\]"
     local DIRNAME=${PWD##*/}
-    virtualenv -p python3 .env --prompt="${ORANGE}($DIRNAME)${RESET}"
-    source .env/bin/activate
+    virtualenv -p python3 .pyenv --prompt="${ORANGE}($DIRNAME)${RESET}"
+    source .pyenv/bin/activate
 }
 
 export MYPYPATH=$HOME/projects/mypy-data/numpy-mypy
