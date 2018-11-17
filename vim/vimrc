@@ -46,11 +46,8 @@ set undoreload=10000
 " runtime! config/keybinds.vim
 
 let mapleader = ","
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
-nnoremap <C-f> <C-w>_
+nnoremap <C-j> 10jz.
+nnoremap <C-k> 10kz.
 
 augroup MikeAutocommands
     autocmd!
