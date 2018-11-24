@@ -18,3 +18,5 @@ cp gitconfig $HOME/.gitconfig
 cp inputrc $HOME/.inputrc
 
 cp tmux.conf $HOME/.tmux.conf
+
+cp -r config/* $HOME/.config
