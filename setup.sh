@@ -7,6 +7,8 @@ cp bashrc $HOME/.bashrc
 
 # vim
 mkdir -p $HOME/.vim
+mkdir -p $HOME/.vim/undo
+chmod og-rwx $HOME/.vim/undo
 cp -r vim/* $HOME/.vim/
 
 # git
