@@ -39,15 +39,11 @@ set undolevels=1000
 set undoreload=10000
 
 
-" runtime! config/tabs.vim
-" runtime! config/history.vim
-" runtime! config/functions.vim
-" runtime! config/lineno.vim
+"runtime! config/tabs.vim
+"runtime! config/history.vim
+runtime! config/functions.vim
+runtime! config/lineno.vim
 " runtime! config/keybinds.vim
-
-let mapleader = ","
-nnoremap <C-j> 10jz.
-nnoremap <C-k> 10kz.
 
 augroup MikeAutocommands
     autocmd!
@@ -58,3 +54,13 @@ hi StatusLine cterm=reverse ctermfg=3 ctermbg=7 gui=none
 hi StatusLineNC cterm=reverse ctermfg=0 ctermbg=7 gui=none
 
 set wildmode=list:longest
+
+let mapleader = ","
+nnoremap <leader>r :source $MYVIMRC<cr>:echo "Reloaded .vimrc"<cr>
+
+nnoremap <C-j> 10jz.
+nnoremap <C-k> 10kz.
+nnoremap <C-f> <C-w>_
+
+nnoremap <C-c> <nop>
+inoremap <C-c> <esc>l
