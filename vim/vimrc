@@ -57,6 +57,9 @@ set wildmode=list:longest
 
 let mapleader = ","
 nnoremap <leader>r :source $MYVIMRC<cr>:echo "Reloaded .vimrc"<cr>
+nnoremap <leader>f :echo expand('%:p')<cr>
+nnoremap <leader>s :call RStrip()<cr>:echo "Stripped trailing whitespace."<cr>
+noremap <leader>l :set number!<cr>
 
 nnoremap <C-j> 10jz.
 nnoremap <C-k> 10kz.
