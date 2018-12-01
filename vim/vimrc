@@ -3,7 +3,7 @@ syntax on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
-" TABS 
+" TABS
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set tabstop=4
@@ -67,3 +67,12 @@ nnoremap <C-f> <C-w>_
 
 nnoremap <C-c> <nop>
 inoremap <C-c> <esc>l
+nnoremap q: <nop>
+
+" Sets special characters to display for trailing space
+" and other obnoxious characters.
+" 	    <- for a tab
+" ░     <- for trailing whitespace
+" ␣     <- non-blocking space
+set listchars=tab:⇥\ ,trail:░,nbsp:␣
+set list
