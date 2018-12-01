@@ -71,8 +71,11 @@ nnoremap q: <nop>
 
 " Sets special characters to display for trailing space
 " and other obnoxious characters.
-" 	    <- for a tab
-" ░     <- for trailing whitespace
-" ␣     <- non-blocking space
-set listchars=tab:⇥\ ,trail:░,nbsp:␣
+"
+" See: https://www.compart.com/en/unicode/
+"
+" 🞘🞝🞝🞝   <- for a tab
+" ░░░    <- for trailing whitespace
+" ␣      <- non-breaking space
+set listchars=tab:🞘🞝,trail:░,nbsp:␣
 set list
