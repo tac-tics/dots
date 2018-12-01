@@ -2,6 +2,7 @@
 
 # bash
 mkdir -p $HOME/.bash
+mkdir -p $HOME/.bash/completion.d
 cp -r bash/* $HOME/.bash/
 cp bashrc $HOME/.bashrc
 

@@ -8,3 +8,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+for file in $HOME/.bash/completion.d/*
+do
+    [ -f $file ] && source $file
+done

@@ -1,4 +1,4 @@
 for file in $HOME/.bash/*
 do
-    source $file
+    [ -f $file ] && source $file
 done
