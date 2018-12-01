@@ -2,3 +2,4 @@
 alias rg='rg --color=always'
 alias less='less -R'
 alias dc='docker-compose'
+alias vm='VBoxManage'
