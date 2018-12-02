@@ -54,13 +54,23 @@ runtime! config/lineno.vim
 hi StatusLine cterm=reverse ctermfg=3 ctermbg=7 gui=none
 hi StatusLineNC cterm=reverse ctermfg=0 ctermbg=7 gui=none
 
+set statusline=%F
+
 set wildmode=list:longest
 
 let mapleader = ","
 nnoremap <leader>r :source $MYVIMRC<cr>:echo "Reloaded .vimrc"<cr>
-nnoremap <leader>f :echo expand('%:p')<cr>
 nnoremap <leader>s :call RStrip()<cr>:echo "Stripped trailing whitespace."<cr>
 noremap <leader>l :set number!<cr>
+
+" Requires NERDTree
+nnoremap <leader>t :NERDTreeToggle<cr>
+nnoremap <leader>t :NERDTreeToggle<cr>
+
+" Requires fzf.vim
+nnoremap <leader>f :Files<cr>
+nnoremap <leader>gc :Commits<cr>
+nnoremap <leader>gf :BCommits<cr>
 
 nnoremap <C-j> 10jz.
 nnoremap <C-k> 10kz.
