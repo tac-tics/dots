@@ -60,8 +60,8 @@ set wildmode=list:longest
 
 let mapleader = ","
 nnoremap <leader>r :source $MYVIMRC<cr>:echo "Reloaded .vimrc"<cr>
-nnoremap <leader>s :call RStrip()<cr>:echo "Stripped trailing whitespace."<cr>
 noremap <leader>l :set number!<cr>
+nnoremap <F4> :call RStrip()<cr>:echo "Stripped trailing whitespace."<cr>
 
 " Requires NERDTree
 nnoremap <leader>t :NERDTreeToggle<cr>
@@ -69,7 +69,8 @@ nnoremap <leader>t :NERDTreeToggle<cr>
 
 " Requires fzf.vim
 nnoremap <leader>f :Files<cr>
-nnoremap <leader>gc :Commits<cr>
+nnoremap <leader>s :Rg<cr>
+nnoremap <leader>gg :Commits<cr>
 nnoremap <leader>gf :BCommits<cr>
 
 nnoremap <C-j> 10jz.
