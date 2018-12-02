@@ -80,6 +80,9 @@ nnoremap <C-c> <nop>
 inoremap <C-c> <esc>l
 nnoremap q: <nop>
 
+" For vim-gitgutter
+set updatetime=100
+
 " Sets special characters to display for trailing space
 " and other obnoxious characters.
 "
