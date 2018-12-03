@@ -33,6 +33,7 @@ augroup FileTypes
     autocmd!
     autocmd Filetype xml setlocal autoindent nocindent nosmartindent indentexpr=
     autocmd Filetype html setlocal autoindent nocindent nosmartindent indentexpr=
+    autocmd Filetype vim nnoremap <leader>R :source $MYVIMRC<cr>:echo "Reloaded .vimrc"<cr>
 augroup end
 
 augroup RestoreCursor
@@ -59,7 +60,6 @@ set statusline=%F
 set wildmode=list:longest
 
 let mapleader = ","
-nnoremap <leader>r :source $MYVIMRC<cr>:echo "Reloaded .vimrc"<cr>
 noremap <leader>l :set number!<cr>
 nnoremap <F4> :call RStrip()<cr>:echo "Stripped trailing whitespace."<cr>
 
@@ -69,7 +69,8 @@ nnoremap <leader>t :NERDTreeToggle<cr>
 
 " Requires fzf.vim
 nnoremap <leader>f :Files<cr>
-nnoremap <leader>s :Rg<cr>
+nnoremap <leader>o :History<cr>
+nnoremap <leader>r :Rg<cr>
 nnoremap <leader>gg :Commits<cr>
 nnoremap <leader>gf :BCommits<cr>
 
