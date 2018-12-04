@@ -1,4 +1,7 @@
 PATH=${PATH:+$PATH:}$HOME/.cargo/bin
 PATH=${PATH:+$PATH:}$HOME/.local/bin
 
+export RISCV=$HOME/.local/riscv
+PATH=${PATH:+$PATH:}$RISCV/bin
+
 export PATH
