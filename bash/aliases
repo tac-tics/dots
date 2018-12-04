@@ -1,4 +1,7 @@
-# alias vim='nvim'
+# if which nvim > /dev/null ; then
+#     alias vim='nvim'
+# fi
+
 alias rg='rg --color=always'
 alias less='less -R'
 alias dc='docker-compose'
