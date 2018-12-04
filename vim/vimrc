@@ -75,6 +75,9 @@ nnoremap <leader>o :Files<cr>
 nnoremap <leader>gc :Commits<cr>
 nnoremap <leader>gf :BCommits<cr>
 
+" Requires vim-fugitive
+nnoremap <leader>gb :Gblame<cr>
+
 noremap <C-j> 10jz.
 noremap <C-k> 10kz.
 nnoremap <C-f> <C-w>_
