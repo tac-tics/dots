@@ -62,24 +62,24 @@ set wildmode=list:longest
 let mapleader = ","
 noremap <leader>l :set number!<cr>
 nnoremap <F4> :call RStrip()<cr>:echo "Stripped trailing whitespace."<cr>
+nnoremap <leader>j :new<cr>:setlocal buftype=nofile bufhidden=wipe nobuflisted noswapfile<cr>!!jira show<cr>
 
 " Requires NERDTree
 nnoremap <leader>t :NERDTreeToggle<cr>
 nnoremap <leader>t :NERDTreeToggle<cr>
 
 " Requires fzf.vim
-nnoremap <leader>f :Files<cr>
-nnoremap <leader>o :History<cr>
 nnoremap <leader>r :Rg<cr>
-nnoremap <leader>gg :Commits<cr>
+nnoremap <leader>f :History<cr>
+nnoremap <leader>o :Files<cr>
+nnoremap <leader>gc :Commits<cr>
 nnoremap <leader>gf :BCommits<cr>
 
-nnoremap <C-j> 10jz.
-nnoremap <C-k> 10kz.
+noremap <C-j> 10jz.
+noremap <C-k> 10kz.
 nnoremap <C-f> <C-w>_
 
-nnoremap <C-c> <nop>
-inoremap <C-c> <esc>l
+inoremap <C-c> <esc>
 nnoremap q: <nop>
 
 " For vim-gitgutter
