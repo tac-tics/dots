@@ -83,7 +83,6 @@ noremap <C-k> 10kz.
 nnoremap <C-f> <C-w>_
 
 inoremap <C-c> <esc>
-nnoremap q: <nop>
 
 " For vim-gitgutter
 set updatetime=100
