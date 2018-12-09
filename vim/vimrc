@@ -66,8 +66,7 @@ nnoremap <leader>j :new<cr>:setlocal buftype=nofile bufhidden=wipe nobuflisted n
 
 " Requires NERDTree
 nnoremap <leader>t :NERDTreeToggle<cr>
-let g:NERDTreeMapPreview = "<cr>"
-let g:NERDTreeMapQuit = "<esc>"
+let g:NERDTreeShowHidden = 1
 
 " Requires fzf.vim
 nnoremap <leader>r :Rg<cr>
