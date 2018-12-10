@@ -78,8 +78,10 @@ nnoremap <leader>gf :BCommits<cr>
 " Requires vim-fugitive
 nnoremap <leader>gb :Gblame<cr>
 
-noremap <C-j> 10jz.
-noremap <C-k> 10kz.
+noremap <C-j> <C-d>z.
+noremap <C-k> <C-u>z.
+
+set scroll=10
 
 nnoremap <C-f> <C-w>_
 nnoremap <C-w>+ :resize +5<cr>
