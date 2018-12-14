@@ -88,6 +88,8 @@ nnoremap <C-w>+ :resize +5<cr>
 nnoremap <C-w>- :resize -5<cr>
 
 inoremap <C-c> <esc>
+inoremap <C-n> <nop>
+inoremap <C-p> <nop>
 
 " For vim-gitgutter
 set updatetime=100
