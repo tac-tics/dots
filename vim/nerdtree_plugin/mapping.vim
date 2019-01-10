@@ -11,10 +11,22 @@ call NERDTreeAddKeyMap({
    \ 'scope': 'FileNode' })
 
 call NERDTreeAddKeyMap({
-   \ 'key': '<esc>',
+   \ 'key': '<down>',
    \ 'callback': 'NERDTreeCloseTreeWindow',
    \ 'quickhelpText': 'echo full path of current node',
    \ 'scope': 'Node' })
+
+" call NERDTreeAddKeyMap({
+"    \ 'key': '<up>',
+"    \ 'callback': 'NERDTreeMenuUp',
+"    \ 'quickhelpText': 'echo full path of current node',
+"    \ 'scope': 'Node' })
+"
+" call NERDTreeAddKeyMap({
+"    \ 'key': '<down>',
+"    \ 'callback': 'NERDTreeMenuDown',
+"    \ 'quickhelpText': 'echo full path of current node',
+"    \ 'scope': 'Node' })
 
 function! NERDTreeActivate(dirnode)
     echo a:dirnode.activate()
@@ -34,4 +46,12 @@ function NERDTreeCloseTreeWindow(node)
             call nerdtree#echo("Cannot close last window")
         endif
     endif
+endfunction
+
+function NERDTreeMenuUp(node)
+    call g:NERDTreeMenuController.cursorUp()
+endfunction
+
+function NERDTreeMenuDown(node)
+    call g:NERDTreeMenuController.cursorDown()
 endfunction
