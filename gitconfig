@@ -8,7 +8,7 @@
 [alias]
     graph = log --graph --decorate
     undo = reset --soft HEAD~
-    commitsof = !git graph "${1}...${1}^1"
+    commitsof = !git log "${1}...${1}^1"
 
 [apply]
     whitespace = nowarn
