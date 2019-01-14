@@ -9,4 +9,6 @@ highlight LineNr cterm=bold ctermfg=DarkGrey
 set colorcolumn=80
 highlight ColorColumn cterm=bold ctermbg=Black
 
-set signcolumn=yes
+if has('signcolumn')
+    set signcolumn=yes
+endif
