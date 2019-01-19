@@ -83,7 +83,7 @@ let g:NERDTreeShowHidden = 1
 " Requires fzf.vim
 nnoremap <leader>r :Rg<cr>
 nnoremap <leader>f :History<cr>
-nnoremap <leader>o :Files<cr>
+nnoremap <leader>e :Files<cr>
 nnoremap <leader>gc :Commits<cr>
 nnoremap <leader>gf :BCommits<cr>
 
