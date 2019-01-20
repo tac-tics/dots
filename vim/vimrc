@@ -122,18 +122,18 @@ set list
 
 function! DoRestore()
     let most_recent_file = MostRecentFile()
-    exe "edit " . most_recent_file
+    exe 'edit ' . most_recent_file
 endfunction
 
 function! RestoreIfNoArgs()
-    if argc() == 0 && bufname("%") == ""
+    if argc() == 0 && bufname('%') == ''
         call timer_start(0, {tid -> DoRestore()})
     endif
 endfunction
 
 function! MostRecentFile()
-    for line in readfile($HOME . "/.viminfo")
-        if line[0] == '>'
+    for line in readfile($HOME . '/.viminfo')
+        if line[0] == '>' && line !~ '.git'
             return line[2:]
         endif
     endfor
