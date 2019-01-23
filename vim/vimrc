@@ -120,14 +120,14 @@ set updatetime=100
 set listchars=tab:🞘🞝,trail:░,nbsp:␣
 set list
 
-function! DoRestore()
+function! DoRestore(tid)
     let most_recent_file = MostRecentFile()
     exe 'edit ' . most_recent_file
 endfunction
 
 function! RestoreIfNoArgs()
     if argc() == 0 && bufname('%') == ''
-        call timer_start(0, {tid -> DoRestore()})
+        call timer_start(0, 'DoRestore')
     endif
 endfunction
 
