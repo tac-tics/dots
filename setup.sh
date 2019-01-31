@@ -24,3 +24,6 @@ cp tmux.conf $HOME/.tmux.conf
 
 mkdir -p $HOME/.config
 cp -r config/* $HOME/.config
+
+mkdir -p $HOME/.docker
+cp -r docker/* $HOME/.docker
