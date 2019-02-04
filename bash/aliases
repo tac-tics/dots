@@ -2,10 +2,13 @@
 #     alias vim='nvim'
 # fi
 
-alias rg='rg --color=always'
 alias less='less -R'
-alias dc='docker-compose'
 alias hexdump='hexdump -C -v'
+alias gpg='gpg2'
+alias python='python3'
+
+alias rg='rg --color=always'
+alias dc='docker-compose'
 alias vm='VBoxManage'
 
 function add-ssh-key() {
