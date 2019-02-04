@@ -5,6 +5,7 @@
 alias rg='rg --color=always'
 alias less='less -R'
 alias dc='docker-compose'
+alias hexdump='hexdump -C'
 alias vm='VBoxManage'
 
 function add-ssh-key() {
