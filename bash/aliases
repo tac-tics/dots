@@ -17,5 +17,5 @@ function add-ssh-key() {
 }
 
 f () {
-    find "$PWD" -type f -name '*'"$1"'*'
+    find "$PWD" -type f -name '*'"$1"'*' | grep -v /.git/
 }
