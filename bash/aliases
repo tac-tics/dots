@@ -19,3 +19,17 @@ function add-ssh-key() {
 function f() {
     find "$PWD" -type f -name '*'"$1"'*' | grep -v /.git/
 }
+
+
+function downloads() {
+    while [[ $# -gt 0 ]]; do
+        key="$1"
+        case $key in
+        --clear)
+            rm -rf $HOME/Downloads/*
+            shift
+        ;;
+        esac
+    done
+    ls $HOME/Downloads -1t | head -n 10
+}
