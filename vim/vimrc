@@ -145,3 +145,6 @@ augroup OpenLastFileIfNoArgs
 augroup end
 
 set cursorline
+
+" Disable automatic continuation of comments
+autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
