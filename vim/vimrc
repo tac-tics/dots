@@ -86,6 +86,10 @@ nnoremap <leader>f :History<cr>
 nnoremap <leader>e :Files<cr>
 nnoremap <leader>gc :Commits<cr>
 nnoremap <leader>gf :BCommits<cr>
+nnoremap <leader>u :UndotreeToggle<cr>
+
+let g:undotree_DiffAutoOpen = 0
+let g:undotree_SetFocusWhenToggle = 1
 
 " Requires vim-fugitive
 nnoremap <leader>gb :Gblame<cr>
