@@ -74,7 +74,7 @@ set wildmode=list:longest
 let mapleader = ","
 noremap <leader>l :set number!<cr>
 nnoremap <F4> :call RStrip()<cr>:echo "Stripped trailing whitespace."<cr>
-nnoremap <leader>j :new<cr>:setlocal buftype=nofile bufhidden=wipe nobuflisted noswapfile<cr>!!jira show<cr>
+nnoremap <leader>j :new<cr>:setlocal buftype=nofile bufhidden=wipe nobuflisted<cr>!!jira show<cr>
 
 " Requires NERDTree
 nnoremap <leader>t :NERDTreeToggle<cr>
@@ -149,6 +149,7 @@ augroup OpenLastFileIfNoArgs
 augroup end
 
 set cursorline
+set noswapfile
 
 " Disable automatic continuation of comments
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
