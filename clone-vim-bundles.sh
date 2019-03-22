@@ -1,5 +1,5 @@
 #!/bin/bash
-# sudo apt install python-language-server
+# sudo pip3 install python-language-server
 #
 # rustup update
 # rustup component add rls rust-analysis rust-src
