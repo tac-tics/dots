@@ -72,7 +72,8 @@ set statusline=%F
 set wildmode=list:longest
 
 let mapleader = ","
-noremap <leader>l :set number!<cr>
+runtime! config/lsp.vim
+" noremap <leader>l :set number!<cr>
 nnoremap <F4> :call RStrip()<cr>:echo "Stripped trailing whitespace."<cr>
 nnoremap <leader>j :new<cr>:setlocal buftype=nofile bufhidden=wipe nobuflisted<cr>!!jira show<cr>
 
