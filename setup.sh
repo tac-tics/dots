@@ -9,11 +9,10 @@ cp profile $HOME/.profile
 
 # vim
 mkdir -p $HOME/.vim
+mkdir -p $HOME/.vim/bundle
 mkdir -p $HOME/.vim/undo
-mkdir -p $HOME/.vim/nerdtree_plugin
 chmod og-rwx $HOME/.vim/undo
 cp -r vim/* $HOME/.vim/
-cp -r vim/nerdtree_plugin/* $HOME/.vim/nerdtree_plugin/
 
 # git
 cp gitconfig $HOME/.gitconfig
