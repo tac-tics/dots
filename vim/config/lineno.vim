@@ -6,7 +6,7 @@ set number
 set numberwidth=4
 highlight LineNr cterm=bold ctermfg=DarkGrey
 
-set colorcolumn=100
+set colorcolumn=101
 highlight ColorColumn cterm=bold ctermbg=Black
 
 if has('signcolumn')
