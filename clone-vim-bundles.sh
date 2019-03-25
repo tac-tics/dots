@@ -16,7 +16,7 @@ repos=(
     https://github.com/airblade/vim-gitgutter
     https://github.com/prabirshrestha/vim-lsp
     https://github.com/stephpy/vim-yaml
-    https://github.com/vim-scripts/YankRing.vim
+#     https://github.com/vim-scripts/YankRing.vim
 )
 
 for repo in ${repos[@]}
