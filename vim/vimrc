@@ -161,3 +161,5 @@ augroup GitCommit
     autocmd!
     autocmd Filetype gitcommit call setpos(".", 1)
 augroup end
+
+set smartindent
