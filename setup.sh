@@ -27,3 +27,6 @@ cp -r config/* $HOME/.config
 
 mkdir -p $HOME/.docker
 cp -r docker/* $HOME/.docker
+
+mkdir -p $HOME/.ipython
+cp -r ipython/* $HOME/.ipython
