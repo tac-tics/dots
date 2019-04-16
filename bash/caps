@@ -1,0 +1,10 @@
+function capslock-off() {
+# https://stackoverflow.com/questions/2176532/how-to-map-caps-lock-key-in-vim
+    xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+}
+
+function capslock-on() {
+# https://www.cyberciti.biz/faq/linux-deactivate-caps-lock/
+    xmodmap -e "add lock = Caps_Lock"
+    setxkbmap -option
+}
