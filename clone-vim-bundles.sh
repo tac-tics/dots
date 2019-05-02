@@ -1,6 +1,8 @@
 #!/bin/bash
 # sudo pip3 install python-language-server
 #
+# sudo apt install -y xsel
+#
 # rustup update
 # rustup component add rls rust-analysis rust-src
 
@@ -17,6 +19,7 @@ repos=(
     https://github.com/prabirshrestha/vim-lsp
     https://github.com/stephpy/vim-yaml
 #     https://github.com/vim-scripts/YankRing.vim
+    https://github.com/christoomey/vim-system-copy
 )
 
 for repo in ${repos[@]}
