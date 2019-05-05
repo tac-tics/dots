@@ -1,0 +1,4 @@
+function command_not_found_handle() {
+    echo "Command not found :("
+    return 127
+}
