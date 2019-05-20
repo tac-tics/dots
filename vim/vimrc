@@ -93,6 +93,8 @@ nnoremap <leader>u :UndotreeToggle<cr>
 let g:undotree_DiffAutoOpen = 0
 let g:undotree_SetFocusWhenToggle = 1
 
+" always show gutter
+set signcolumn=yes
 " Requires vim-fugitive
 nnoremap <leader>gb :Gblame<cr>
 
