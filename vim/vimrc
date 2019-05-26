@@ -72,6 +72,7 @@ set statusline=%F
 set wildmode=list:longest
 
 let mapleader = ","
+nnoremap <leader>; ,
 runtime! config/lsp.vim
 " noremap <leader>l :set number!<cr>
 noremap <leader>w :call RStrip()<cr>:echo "Stripped trailing whitespace."<cr>
