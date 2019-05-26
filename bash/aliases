@@ -26,6 +26,24 @@ function p() {
     cd "$HOME/projects/$path"
 }
 
+function notes() {
+    while [[ $# -gt 0 ]]; do
+        key="$1"
+        case $key in
+        push)
+            git -C $HOME/projects/notes add .
+            git -C $HOME/projects/notes commit -m 'Update.'
+            git -C $HOME/projects/notes push
+            return 0
+        ;;
+        *)
+            echo "Unknown parameter $1"
+            return 1
+        esac
+    done
+    vim $HOME/projects/notes/notes.txt
+}
+
 
 function downloads() {
     while [[ $# -gt 0 ]]; do
