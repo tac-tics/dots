@@ -46,6 +46,8 @@ augroup FileTypes
     autocmd Filetype javascript set tabstop=2
     autocmd Filetype javascript set shiftwidth=2
     autocmd Filetype javascript set softtabstop=2
+
+    autocmd Filetype text set tw=100
 augroup end
 
 augroup RestoreCursor
@@ -168,6 +170,5 @@ augroup end
 noremap! <C-BS> <C-w>
 set smartindent
 nnoremap <leader>c :normal 0i✓ <cr>
-set tw=100
 
 set backspace=indent,eol,start
