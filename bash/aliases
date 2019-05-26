@@ -20,6 +20,12 @@ function f() {
     find "$PWD" -type f -name '*'"$1"'*' | grep -v /.git/
 }
 
+function p() {
+    target=$(echo $1 | sed 's:/*$::')
+    path=$(ls $HOME/projects -1| grep $target | head -n1)
+    cd "$HOME/projects/$path"
+}
+
 
 function downloads() {
     while [[ $# -gt 0 ]]; do
