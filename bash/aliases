@@ -21,9 +21,14 @@ function f() {
 }
 
 function p() {
-    target=$(echo $1 | sed 's:/*$::')
-    path=$(ls $HOME/projects -1| grep $target | head -n1)
-    cd "$HOME/projects/$path"
+    if [ -z $1 ]
+    then
+        cd "$HOME/projects"
+    else
+        target=$(echo $1 | sed 's:/*$::')
+        path=$(ls $HOME/projects -1| grep $target | head -n1)
+        cd "$HOME/projects/$path"
+    fi
 }
 
 function notes() {
