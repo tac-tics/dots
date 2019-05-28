@@ -1,0 +1,7 @@
+function git-ssh() {
+    git config --local --add core.sshCommand "/usr/bin/ssh -i $1"
+}
+
+function git-email() {
+    git config --local --add user.email $1
+}
