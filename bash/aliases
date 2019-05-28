@@ -41,6 +41,10 @@ function notes() {
             git -C $HOME/projects/notes push
             return 0
         ;;
+        pull)
+            git -C $HOME/projects/notes pull
+            return 0
+        ;;
         *)
             echo "Unknown parameter $1"
             return 1
