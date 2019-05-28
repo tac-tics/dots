@@ -20,6 +20,7 @@ repos=(
     https://github.com/stephpy/vim-yaml
 #     https://github.com/vim-scripts/YankRing.vim
     https://github.com/christoomey/vim-system-copy
+    https://github.com/justinmk/vim-sneak
 )
 
 for repo in ${repos[@]}
