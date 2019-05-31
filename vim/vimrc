@@ -172,3 +172,10 @@ set smartindent
 nnoremap <leader>c :normal 0i✓ <cr>
 
 set backspace=indent,eol,start
+
+" For vim-sneak
+nmap <leader>s <Plug>Sneak_s
+xmap <leader>s <Plug>Sneak_s
+nmap <leader>S <Plug>Sneak_S
+xmap <leader>S <Plug>Sneak_S
+let g:sneak#prompt = ''
