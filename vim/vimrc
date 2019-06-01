@@ -121,9 +121,13 @@ set updatetime=100
 " and other obnoxious characters.
 "
 " See: https://www.compart.com/en/unicode/
-" May require ttf-ancient-fonts package:
+" May require additional an fonts package:
 "
+" On Ubuntu:
 "     $ sudo apt-get install ttf-ancient-fonts
+"
+" On OpenSusse:
+"     $ sudo zypper install gdouros-symbola-fonts
 "
 " 🞘🞝🞝🞝   <- for a tab
 " ░░░    <- for trailing whitespace
