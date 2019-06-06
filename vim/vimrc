@@ -183,3 +183,6 @@ xmap <leader>s <Plug>Sneak_s
 nmap <leader>S <Plug>Sneak_S
 xmap <leader>S <Plug>Sneak_S
 let g:sneak#prompt = ''
+
+" Disable "Ex mode"
+map Q <nop>
