@@ -17,7 +17,11 @@ function add-ssh-key() {
 }
 
 function f() {
-    find "$PWD" -type f -name '*'"$1"'*' | grep -v /.git/
+    filename=$(fzf --height=10 --query="$1")
+    if [ -n "$filename" ]
+    then
+        vim $filename
+    fi
 }
 
 function p() {
