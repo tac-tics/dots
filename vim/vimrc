@@ -101,8 +101,8 @@ set signcolumn=yes
 " Requires vim-fugitive
 nnoremap <leader>gb :Gblame<cr>
 
-noremap <C-j> <C-d>z.
-noremap <C-k> <C-u>z.
+noremap <C-j> 5jz.
+noremap <C-k> 5kz.
 
 set scroll=10
 
@@ -186,3 +186,4 @@ let g:sneak#prompt = ''
 
 " Disable "Ex mode"
 map Q <nop>
+map K <nop>
