@@ -29,11 +29,20 @@ function p() {
     then
         cd "$HOME/projects"
     else
-        target=$(echo $1 | sed 's:/*$::')
-        path=$(ls $HOME/projects -1| grep $target | head -n1)
-        cd "$HOME/projects/$path"
+        # target=$(echo $1 | sed 's:/*$::')
+        # path=$(ls $HOME/projects -1| grep $target | head -n1)
+        cd "$HOME/projects/$1"
     fi
 }
+
+_p_completion()
+{
+    CURRENT_WORD=${COMP_WORDS[$COMP_CWORD]}
+    projects=$(ls -1 "$HOME/projects")
+    COMPREPLY=( $(compgen -W "$projects" "$CURRENT_WORD") )
+}
+
+complete -F _p_completion p
 
 function notes() {
     while [[ $# -gt 0 ]]; do
