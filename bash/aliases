@@ -79,3 +79,5 @@ function downloads() {
     done
     ls $HOME/Downloads -1t | head -n 10
 }
+
+alias watch='watch -n1'
