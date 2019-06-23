@@ -1,0 +1,10 @@
+if [[ -x "$(which doctl)" ]]
+then
+    source <(doctl completion bash)
+fi
+
+
+if [[ -x "$(which kubectl)" ]]
+then
+    source <(kubectl completion bash)
+fi
