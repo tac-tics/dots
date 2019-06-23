@@ -25,13 +25,17 @@ function f() {
 }
 
 function p() {
-    if [ -z $1 ]
+    if [ -z "$1" ]
     then
         cd "$HOME/projects"
     else
-        # target=$(echo $1 | sed 's:/*$::')
-        # path=$(ls $HOME/projects -1| grep $target | head -n1)
-        cd "$HOME/projects/$1"
+        if [ -n "$TMUX" ]
+        then
+            cd "$HOME/projects/$1" && \
+                tmux rename-window "$1"
+        else
+            cd "$HOME/projects/$1"
+        fi
     fi
 }
 
