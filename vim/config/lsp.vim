@@ -14,6 +14,15 @@ if executable('pyls')
         \ })
 endif
 
+if executable('metals-vim')
+   au User lsp_setup call lsp#register_server({
+         \ 'name': 'metals',
+         \ 'cmd': {server_info->['metals-vim']},
+         \ 'initialization_options': { 'rootPatterns': 'build.sbt' },
+         \ 'whitelist': [ 'scala', 'sbt' ],
+         \ })
+endif
+
 noremap <leader>ll :LspHover<cr>
 noremap <leader>la :LspCodeAction<cr>
 noremap <leader>ld :LspDefinition<cr>
