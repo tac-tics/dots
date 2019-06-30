@@ -28,7 +28,7 @@ fi
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
-if [[ -x `which motd` ]]
+if [[ -x $(which motd 2> /dev/null) ]]
 then
     motd
 fi
