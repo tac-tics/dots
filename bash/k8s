@@ -1,10 +1,10 @@
-if [[ -x "$(which doctl)" ]]
+if [[ -x "$(which doctl 2> /dev/null)" ]]
 then
     source <(doctl completion bash)
 fi
 
 
-if [[ -x "$(which kubectl)" ]]
+if [[ -x "$(which kubectl 2> /dev/null)" ]]
 then
     source <(kubectl completion bash)
 fi
