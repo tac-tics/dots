@@ -8,3 +8,8 @@ if [[ -x "$(which kubectl 2> /dev/null)" ]]
 then
     source <(kubectl completion bash)
 fi
+
+if [[ -x "$(which helm)" ]]
+then
+    source <(helm completion bash)
+fi
