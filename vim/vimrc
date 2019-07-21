@@ -84,6 +84,8 @@ nnoremap <F4> :call RStrip()<cr>:echo "Stripped trailing whitespace."<cr>
 nnoremap <leader>t :NERDTreeToggle<cr>
 let g:NERDTreeShowHidden = 1
 
+xnoremap <C-m> :'<,'>norm @q<cr>
+
 " Requires fzf.vim
 nnoremap <leader>r :Rg<cr>
 nnoremap <leader>f :History<cr>
