@@ -8,6 +8,7 @@
 [alias]
     graph = log --graph --decorate
     undo = reset --soft HEAD~
+    prs = log --merges --grep='Merge pull request'
     commitsof = !git log "${1}...${1}^1"
 
 [apply]
