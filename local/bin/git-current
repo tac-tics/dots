@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+
+import subprocess
+
+proc = subprocess.Popen(['git', 'status'], stdout=subprocess.PIPE)
+
+line = proc.stdout.readline().decode().strip()
+if line.startswith('On branch '):
+    start_idx = len('On branch ')
+    print(line[start_idx:])
+elif line.startswith('HEAD detached at '):
+    print(line)
+else:
+    raise Exception('Error parsing line from git status: ' + line)

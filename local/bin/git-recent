@@ -1,0 +1,5 @@
+#!/bin/bash
+
+count=${1:-'5'}
+MAGENTA='\033[0;35m'
+git for-each-ref --count=$count --sort=-committerdate refs/heads --format='%(color:green)%(HEAD) %(color:yellow)%(refname:short) %(color:white)-- %(color:green)%(authorname) %(color:white)-- %(color:bold magenta)%(committerdate:relative)' --color=never

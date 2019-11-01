@@ -30,3 +30,6 @@ cp -r docker/* $HOME/.docker
 
 mkdir -p $HOME/.ipython
 cp -r ipython/* $HOME/.ipython
+
+mkdir -p $HOME/.local
+cp -r local/* $HOME/.local
