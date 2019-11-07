@@ -1,5 +1,39 @@
-#!/bin/bash
+#!/usr/bin/env python3.7
 
-count=${1:-'5'}
-MAGENTA='\033[0;35m'
-git for-each-ref --count=$count --sort=-committerdate refs/heads --format='%(color:green)%(HEAD) %(color:yellow)%(refname:short) %(color:white)-- %(color:green)%(authorname) %(color:white)-- %(color:bold magenta)%(committerdate:relative)' --color=never
+from dataclasses import dataclass
+import subprocess
+
+count = 5
+proc = subprocess.Popen([
+        'git',
+        'for-each-ref',
+        '--count=' + str(count),
+        '--sort=-committerdate',
+        'refs/heads',
+        "--format=%(HEAD)|%(refname:short)|%(authorname)|%(committerdate:relative)",
+    ],
+    stdout=subprocess.PIPE
+)
+
+items = []
+
+for line in proc.stdout:
+    line = line.decode().strip()
+    current, branch, author, date = line.split('|')
+    items.append((current, branch, author, date))
+
+max_branch_len = max(len(item[1]) for item in items)
+max_author_len = max(len(item[2]) for item in items)
+max_date_len = max(len(item[3]) for item in items)
+
+for current, branch, author, date in items:
+
+    if current == '*':
+        print('* ', end='')
+    else:
+        print('  ', end='')
+
+    print(branch.ljust(max_branch_len + 4), end='')
+    print(date.ljust(max_date_len + 4), end='')
+    print(author)
+
