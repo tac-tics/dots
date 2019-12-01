@@ -21,6 +21,7 @@ repos=(
     https://github.com/christoomey/vim-system-copy
     https://github.com/justinmk/vim-sneak
     https://github.com/tpope/vim-surround
+    https://github.com/leafgarland/typescript-vim
 #     https://github.com/vim-scripts/YankRing.vim
 #    https://github.com/easymotion/vim-easymotion
 )
