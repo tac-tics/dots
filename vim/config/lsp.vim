@@ -45,3 +45,4 @@ let g:lsp_signs_hint = {'text': 'h'}
 let g:lsp_highlights_enabled = 1
 let g:lsp_highlight_references_enabled = 0
 let g:lsp_textprop_enabled = 0
+let g:lsp_signature_help_enabled = 0
