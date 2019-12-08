@@ -5,3 +5,5 @@ export RISCV=$HOME/.local/riscv
 PATH=${PATH:+$PATH:}$RISCV/bin
 
 export PATH
+
+export PROJECTS=$HOME/projects
