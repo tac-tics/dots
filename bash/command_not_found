@@ -1,4 +1,4 @@
 function command_not_found_handle() {
-    echo "Command not found :("
+    echo "Command not found: $1"
     return 127
 }
