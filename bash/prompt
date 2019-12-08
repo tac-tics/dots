@@ -5,7 +5,17 @@ esac
 
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    if [ "$POETRY_ACTIVE" = "1" ]
+    then
+        ORANGE='\[\033[0;33m\]'
+        RESET='\[\033[0m\]'
+        POETRY_PROMPT="${ORANGE}[poetry]${RESET}"
+    else
+        POETRY_PROMPT=''
+    fi
+
+    SHELL_PROMPT='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1="${POETRY_PROMPT}${SHELL_PROMPT}"
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
