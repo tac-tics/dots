@@ -10,6 +10,7 @@ alias python='python3'
 alias rg='rg --color=always'
 alias dc='docker-compose'
 alias vm='VBoxManage'
+alias reload='source $HOME/.bashrc'
 
 function add-ssh-key() {
     eval `ssh-agent -s`
