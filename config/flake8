@@ -1,0 +1,2 @@
+[flake8]
+ignore = 501 # E501 is max line length
