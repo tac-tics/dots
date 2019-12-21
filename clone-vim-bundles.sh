@@ -25,8 +25,9 @@ repos=(
     https://github.com/leafgarland/typescript-vim
 
     # language server
-    https://github.com/prabirshrestha/vim-lsp
+    # https://github.com/prabirshrestha/vim-lsp
     # https://github.com/neoclide/coc.nvim
+    https://github.com/autozimu/LanguageClient-neovim
 
     https://github.com/w0rp/ale
 
