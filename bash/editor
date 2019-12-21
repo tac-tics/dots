@@ -1,2 +1,8 @@
-EDITOR=vim
+if [ -f $(which nvim) ]
+then
+    EDITOR=nvim
+else
+    EDITOR=vim
+fi
+
 export EDITOR

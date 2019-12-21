@@ -3,7 +3,7 @@
     # email = tac@tac-tics.net
 
 [core]
-    editor = vim
+    editor = nvim
 
 [alias]
     graph = log --graph --decorate
