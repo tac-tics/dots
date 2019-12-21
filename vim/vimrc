@@ -10,4 +10,5 @@ runtime! config/history.vim
 runtime! config/lineno.vim
 runtime! config/keybinds.vim
 runtime! config/statusline.vim
+runtime! config/vim-highlightedyank.vim
 runtime! config/lsp.vim

@@ -16,6 +16,8 @@ repos=(
     https://github.com/tpope/vim-fugitive
     https://github.com/airblade/vim-gitgutter
 
+    https://github.com/machakann/vim-highlightedyank
+
     # language plugins
     https://github.com/rust-lang/rust.vim.git
     https://github.com/vhda/verilog_systemverilog.vim
