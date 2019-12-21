@@ -20,6 +20,9 @@ set nowritebackup
 " SETTINGS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Visual mode in NeoVim won't show without this.
+highlight Visual cterm=reverse ctermbg=NONE
+
 syntax on
 set scroll=10
 set wildmode=list:longest
