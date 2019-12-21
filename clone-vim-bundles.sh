@@ -8,21 +8,28 @@
 
 
 repos=(
+    # tools
     https://github.com/prabirshrestha/async.vim
     https://github.com/junegunn/fzf
     https://github.com/junegunn/fzf.vim
     https://github.com/scrooloose/nerdtree
-    https://github.com/rust-lang/rust.vim.git
-    https://github.com/vhda/verilog_systemverilog.vim
     https://github.com/tpope/vim-fugitive
     https://github.com/airblade/vim-gitgutter
-    https://github.com/prabirshrestha/vim-lsp
+
+    # language plugins
+    https://github.com/rust-lang/rust.vim.git
+    https://github.com/vhda/verilog_systemverilog.vim
     https://github.com/stephpy/vim-yaml
-    https://github.com/christoomey/vim-system-copy
-    https://github.com/justinmk/vim-sneak
-    https://github.com/tpope/vim-surround
     https://github.com/leafgarland/typescript-vim
-#     https://github.com/vim-scripts/YankRing.vim
+
+    # language server
+    https://github.com/prabirshrestha/vim-lsp
+    # https://github.com/neoclide/coc.nvim
+
+#    https://github.com/christoomey/vim-system-copy
+#    https://github.com/justinmk/vim-sneak
+#    https://github.com/tpope/vim-surround
+#    https://github.com/vim-scripts/YankRing.vim
 #    https://github.com/easymotion/vim-easymotion
 )
 
