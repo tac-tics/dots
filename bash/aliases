@@ -1,6 +1,7 @@
-# if which nvim > /dev/null ; then
-#     alias vim='nvim'
-# fi
+if [ -f $(which nvim) ]
+then
+    alias vim='nvim'
+fi
 
 alias less='less -R'
 alias hexdump='hexdump -C -v'
