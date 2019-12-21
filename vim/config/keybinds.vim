@@ -35,9 +35,11 @@ noremap <C-k> 5kz.
 inoremap <C-n> <nop>
 inoremap <C-p> <nop>
 map Q <nop>
-map K <nop>
 
 inoremap <ScrollWheelUp> <Nop>
 inoremap <ScrollWheelDown> <Nop>
 inoremap <S-ScrollWheelUp> <Nop>
 inoremap <S-ScrollWheelDown> <Nop>
+
+nmap <F2> bp
+nmap <F3> bn
