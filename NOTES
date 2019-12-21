@@ -1,5 +1,6 @@
 #!/bin/bash
-sudo pip3 install python-language-server
+sudo pip3 install python-language-server --user
 sudo apt install -y xsel
 rustup update
 rustup component add rls rust-analysis rust-src
+pip3 install --upgrade neovim --user
