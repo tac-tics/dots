@@ -28,6 +28,8 @@ repos=(
     https://github.com/prabirshrestha/vim-lsp
     # https://github.com/neoclide/coc.nvim
 
+    https://github.com/w0rp/ale
+
 #    https://github.com/christoomey/vim-system-copy
 #    https://github.com/justinmk/vim-sneak
 #    https://github.com/tpope/vim-surround
