@@ -11,6 +11,8 @@ augroup FileTypes
     autocmd Filetype yaml set shiftwidth=2
     autocmd Filetype yaml set softtabstop=2
 
+    autocmd Filetype typescriptreact set filetype=typescript
+
     autocmd Filetype typescript set tabstop=2
     autocmd Filetype typescript set shiftwidth=2
     autocmd Filetype typescript set softtabstop=2
