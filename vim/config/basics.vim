@@ -20,6 +20,7 @@ set nowritebackup
 " SETTINGS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+syntax on
 set scroll=10
 set wildmode=list:longest
 set backspace=indent,eol,start

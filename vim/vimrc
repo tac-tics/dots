@@ -1,5 +1,5 @@
 call pathogen#infect()
-syntax on
+runtime! config/plug.vim
 
 runtime! config/basics.vim
 runtime! config/functions.vim

@@ -1,0 +1,5 @@
+#!/bin/bash
+sudo pip3 install python-language-server
+sudo apt install -y xsel
+rustup update
+rustup component add rls rust-analysis rust-src
