@@ -26,15 +26,30 @@ repos=(
 #    https://github.com/easymotion/vim-easymotion
 )
 
+force=0
+
+while test $# -gt 0; do
+    case "$1" in
+        -f|--force)
+            force=1
+            shift
+            ;;
+        *)
+            break
+            ;;
+    esac
+done
+
 for repo in ${repos[@]}
 do
      # https://stackoverflow.com/questions/3162385/how-to-split-a-string-in-shell-and-get-the-last-field#3162500
 
     bundlename=${repo##*/}
     dir=~/.vim/bundle/$bundlename
-    if [ ! -d $dir ]
+    if [ ! -d $dir ] || [ $force == "1" ]
     then
-        git clone $repo $dir
+        rm -rf $dir 2> /dev/null
+        git clone "$repo" "$dir"
     else
         echo "$bundlename already exists. Skipping.."
     fi
