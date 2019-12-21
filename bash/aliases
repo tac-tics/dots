@@ -49,6 +49,30 @@ _p_completion()
 
 complete -F _p_completion p
 
+function t() {
+    if [ -z "$1" ]
+    then
+        cd "$HOME/tests"
+    else
+        if [ -n "$TMUX" ]
+        then
+            cd "$HOME/tests/$1" && \
+                tmux rename-window "$1"
+        else
+            cd "$HOME/tests/$1"
+        fi
+    fi
+}
+
+_t_completion()
+{
+    CURRENT_WORD=${COMP_WORDS[$COMP_CWORD]}
+    tests=$(ls -1 "$HOME/tests")
+    COMPREPLY=( $(compgen -W "$tests" "$CURRENT_WORD") )
+}
+
+complete -F _t_completion t
+
 function notes() {
     while [[ $# -gt 0 ]]; do
         key="$1"
