@@ -18,5 +18,5 @@ augroup end
 " When opening a git commit, ignore this and set the position to position 1.
 augroup GitCommit
     autocmd!
-    autocmd Filetype gitcommit call setpos(".", 1)
+    autocmd Filetype gitcommit call setpos(".", [0, 0, 0, 0])
 augroup end
