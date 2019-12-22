@@ -12,11 +12,13 @@ function activate {
     fi
 }
 
+export MKVIRTUALENV_PYTHON=python3.7
+
 function mkvirtualenv() {
     local ORANGE="\[\033[0;33m\]"
     local RESET="\[\033[0m\]"
     local DIRNAME=${PWD##*/}
-    virtualenv -p python3 .venv --prompt="${ORANGE}($DIRNAME)${RESET}"
+    virtualenv -p "$MKVIRTUALENV_PYTHON" .venv --prompt="${ORANGE}($DIRNAME)${RESET}"
     source .venv/bin/activate
 }
 
