@@ -26,6 +26,4 @@ Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
 
-Plug 'mhinz/vim-startify'
-
 call plug#end()

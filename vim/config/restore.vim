@@ -1,23 +1,67 @@
-function! DoRestore(tid)
-    let most_recent_file = MostRecentFile()
-    exe 'edit ' . most_recent_file
-endfunction
-
-function! RestoreIfNoArgs()
+function! s:on_vimenter()
+    if get(g:, 'startify_update_oldfiles')
+        call map(v:oldfiles, 'fnamemodify(v:val, ":p")')
+        autocmd startify BufNewFile,BufRead,BufFilePre *
+              \ call s:update_oldfiles(expand('<afile>:p'))
+    endif
     if argc() == 0 && bufname('%') == ''
-        call timer_start(0, 'DoRestore')
+        let recent_files = s:recent_files()
+        let most_recent_file = recent_files[0]
+        exe 'edit ' . most_recent_file
     endif
 endfunction
 
-function! MostRecentFile()
-    for line in readfile($HOME . '/.viminfo')
-        if line[0] == '>' && line !~ '.git'
-            return line[2:]
+
+function! s:recent_files()
+    let results = []
+    let cwd = getcwd()
+
+    for file in v:oldfiles
+        if s:oldfile_filter(file, cwd)
+            let results = add(results, file)
         endif
     endfor
+
+    return results
 endfunction
 
-augroup OpenLastFileIfNoArgs
-    autocmd!
-    autocmd VimEnter * call RestoreIfNoArgs()
-augroup end
+function! s:starts_with(string, prefix)
+    return match(a:string, a:prefix) == 0
+endfunction
+
+
+function! s:contains(string, needle)
+    return match(a:string, a:needle) >= 0
+endfunction
+
+
+function! s:oldfile_filter(file, cwd)
+    if !s:starts_with(a:file, a:cwd)
+        return 0
+    endif
+
+    if s:contains(a:file, '.git/')
+        return 0
+    endif
+
+    return 1
+endfunction
+
+
+function! s:update_oldfiles(file)
+  if g:startify_locked || !exists('v:oldfiles')
+    return
+  endif
+  let idx = index(v:oldfiles, a:file)
+  if idx != -1
+    call remove(v:oldfiles, idx)
+  endif
+  call insert(v:oldfiles, a:file, 0)
+endfunction
+
+
+augroup startify
+    autocmd VimEnter    * nested call s:on_vimenter()
+    autocmd QuickFixCmdPre  *vimgrep* let g:startify_locked = 1
+    autocmd QuickFixCmdPost *vimgrep* let g:startify_locked = 0
+augroup END
