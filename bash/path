@@ -4,6 +4,8 @@ PATH=${PATH:+$PATH:}$HOME/.local/bin
 export RISCV=$HOME/.local/riscv
 PATH=${PATH:+$PATH:}$RISCV/bin
 
+PATH=${PATH:+$PATH:}$HOME/.local/neovim/bin
+
 export PATH
 
 export PROJECTS=$HOME/projects
