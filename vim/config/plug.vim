@@ -13,6 +13,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'vhda/verilog_systemverilog.vim'
 Plug 'stephpy/vim-yaml'
 Plug 'leafgarland/typescript-vim'
+Plug 'itchyny/lightline.vim'
 
 " language server
 Plug 'dense-analysis/ale'

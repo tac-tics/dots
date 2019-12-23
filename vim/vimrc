@@ -12,6 +12,7 @@ runtime! config/keybinds.vim
 runtime! config/statusline.vim
 runtime! config/vim-highlightedyank.vim
 runtime! config/git.vim
+runtime! config/lightline.vim
 runtime! config/ale.vim
 runtime! config/languageclient.vim
 runtime! config/ncm.vim
