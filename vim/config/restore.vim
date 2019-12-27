@@ -44,6 +44,10 @@ function! s:oldfile_filter(file, cwd)
         return 0
     endif
 
+    if !filereadable(a:file)
+        return 0
+    endif
+
     return 1
 endfunction
 
