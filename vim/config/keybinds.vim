@@ -25,8 +25,8 @@ nnoremap <leader>u :UndotreeToggle<cr>
 noremap <F12> :set invnumber<cr>: call ToggleSignColumn()<cr>
 
 noremap <F10> :set invpaste<cr>
-noremap <C-j> 5jz.
-noremap <C-k> 5kz.
+noremap <C-j> <C-e>j<C-e>j<C-e>j<C-e>j<C-e>jM
+noremap <C-k> <C-y>k<C-y>k<C-y>k<C-y>k<C-y>kM
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NOP KEYS
