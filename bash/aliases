@@ -111,3 +111,11 @@ function downloads() {
 }
 
 alias watch='watch -n1'
+
+
+function path() {
+    for p in $(echo $PATH | sed 's/:/ /g')
+    do
+        echo $p
+    done
+}
