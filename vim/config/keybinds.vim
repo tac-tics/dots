@@ -14,6 +14,7 @@ nnoremap <leader>gb :Gblame<cr>
 nnoremap <leader>r :Rg<cr>
 nnoremap <leader>f :History<cr>
 nnoremap <leader>e :Files<cr>
+nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>gc :Commits<cr>
 nnoremap <leader>gf :BCommits<cr>
 nnoremap <leader>u :UndotreeToggle<cr>
