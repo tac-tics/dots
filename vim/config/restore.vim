@@ -6,8 +6,10 @@ function! s:on_vimenter()
     endif
     if argc() == 0 && bufname('%') == ''
         let recent_files = s:recent_files()
-        let most_recent_file = recent_files[0]
-        exe 'edit ' . most_recent_file
+        if len(recent_files) > 0
+            let most_recent_file = recent_files[0]
+            exe 'edit ' . most_recent_file
+        endif
     endif
 endfunction
 
