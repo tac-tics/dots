@@ -23,3 +23,6 @@
 
 [credential]
     helper = manager
+
+[init]
+defaultBranch = master
