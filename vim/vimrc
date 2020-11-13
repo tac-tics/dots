@@ -15,4 +15,4 @@ runtime! config/git.vim
 runtime! config/lightline.vim
 runtime! config/ale.vim
 runtime! config/languageclient.vim
-runtime! config/ncm.vim
+" runtime! config/ncm.vim
