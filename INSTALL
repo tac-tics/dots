@@ -20,7 +20,23 @@ Random Installs
     sudo apt-get install -y \
         gcc \
         tmux \
-        neovim \
+#        neovim \
+
+Build dependency installs for neovim
+
+    sudo apt-get install -y \
+        cmake \
+        build-essential \
+        gettext \
+        libtool-bin \
+        libmsgpack-dev \
+        libuv1-dev
+
+        lua-luv-dev?
+        lua-lpeg-dev?
+        lua-mpack?
+        lua-bitop-de?
+
 
 
 Kubernetes
