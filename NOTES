@@ -3,6 +3,10 @@ sudo pip3 install python-language-server --user
 sudo apt install -y xsel
 rustup update
 rustup component add rls rust-analysis rust-src
+
+curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux -o ~/.local/bin/rust-analyzer
+chmod +x ~/.local/bin/rust-analyzer
+
 pip3 install --upgrade neovim --user
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

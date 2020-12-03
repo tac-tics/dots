@@ -37,7 +37,10 @@ Build dependency installs for neovim
         lua-mpack?
         lua-bitop-de?
 
+# Call PlugInstall on vim from bash:
+# https://github.com/junegunn/vim-plug/issues/675
 
+	nvim --headless +PlugInstall +qall
 
 Kubernetes
 
