@@ -19,7 +19,7 @@
     default = current
 
 [pull]
-    rebase = true
+    ff = only
 
 [credential]
     helper = manager
