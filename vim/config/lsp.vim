@@ -1,1 +1,1 @@
-lua require'lspconfig'.rust_analyzer.setup{}
+" lua require'lspconfig'.rust_analyzer.setup{}

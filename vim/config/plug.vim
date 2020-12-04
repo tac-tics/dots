@@ -18,7 +18,8 @@ call plug#begin('~/.vim/plugged')
 " Plug 'ncm2/ncm2-bufword'
 " Plug 'ncm2/ncm2-path'
 
-Plug 'neovim/nvim-lspconfig'
+" Plug 'neovim/nvim-lspconfig'
+
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
