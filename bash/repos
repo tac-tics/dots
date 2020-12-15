@@ -1,6 +1,9 @@
 #!/bin/bash
 
-export REPOS=$HOME/repos
+if [ -d "$HOME/repos" ]
+then
+    export REPOS=$HOME/repos
+fi
 
 function repo-sync() {
     if [ -z "$REPOS" ]
