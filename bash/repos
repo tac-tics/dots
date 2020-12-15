@@ -1,0 +1,19 @@
+#!/bin/bash
+
+export REPOS=$HOME/repos
+
+function repo-sync() {
+    if [ -z "$REPOS" ]
+    then
+        echo "\$REPOS not set."
+    else
+        repos=$(ls -1 $REPOS)
+        for repo in $repos
+        do
+            echo "Syncing $repo..."
+            git -C "$REPOS/$repo" fetch --all
+            git -C "$REPOS/$repo" push --all
+            echo
+        done
+    fi
+}
