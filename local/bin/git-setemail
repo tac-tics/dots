@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+
+import subprocess
+
+proc = subprocess.Popen([
+        'git',
+        'config',
+        '--get',
+        'user.name',
+    ],
+    stdout=subprocess.PIPE
+)
+username = proc.stdout.read().strip().decode()
+
+proc = subprocess.Popen([
+        'git',
+        'log',
+        '--format=format:%ae',
+    ],
+    stdout=subprocess.PIPE
+)
+
+email_counts = {}
+
+for line in proc.stdout.readlines():
+    email = line.strip().decode()
+    count = email_counts.get(email, 0)
+    email_counts[email] = count + 1
+
+email_count_pairs_sorted = sorted(
+    email_counts.items(),
+    key=lambda pair: pair[1],
+    reverse=True,
+)
+
+email, _ = email_count_pairs_sorted[0]
+
+print('Setting email to', email)
+proc = subprocess.Popen([
+        'git',
+        'config',
+        'user.email',
+        email,
+    ],
+)

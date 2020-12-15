@@ -1,6 +1,5 @@
 [user]
     name = Michael Maloney
-    # email = tac@tac-tics.net
 
 [core]
     editor = nvim
@@ -10,7 +9,6 @@
     undo = reset --soft HEAD~
     prs = log --merges --grep='Merge pull request'
     commitsof = !git log "${1}...${1}^1"
-    recent = !git-recent
 
 [apply]
     whitespace = nowarn
