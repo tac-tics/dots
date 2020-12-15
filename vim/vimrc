@@ -168,3 +168,5 @@ noremap! <C-BS> <C-w>
 set smartindent
 nnoremap <leader>c :normal 0i✓ <cr>
 set tw=100
+
+set backspace=indent,eol,start
