@@ -49,7 +49,7 @@ nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
 
 inoremap <C-n> <nop>
 inoremap <C-p> <nop>
-map Q <nop>
+nmap Q @q
 
 inoremap <ScrollWheelUp> <Nop>
 inoremap <ScrollWheelDown> <Nop>
