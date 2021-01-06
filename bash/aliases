@@ -1,6 +1,7 @@
 if [ -f $(which nvim) ]
 then
     alias vim='nvim'
+    alias vi='nvim'
 fi
 
 alias less='less -R'
