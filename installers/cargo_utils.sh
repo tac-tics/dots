@@ -13,3 +13,4 @@ install quail
 install ripgrep
 install fd-find
 install du-dust
+install tokei
