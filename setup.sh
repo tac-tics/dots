@@ -14,6 +14,12 @@ mkdir -p $HOME/.vim/undo
 chmod og-rwx $HOME/.vim/undo
 cp -r vim/* $HOME/.vim/
 
+if [ ! -f "$HOME/.vim/local.vim" ]
+then
+    cp "vim/local.vim.tpl" "$HOME/.vim/local.vim"
+fi
+
+
 # git
 cp gitconfig $HOME/.gitconfig
 
