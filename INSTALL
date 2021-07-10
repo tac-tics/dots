@@ -52,3 +52,7 @@ Kubernetes
     curl -fS https://storage.googleapis.com/kubernetes-release/release/$STABLE/bin/linux/amd64/kubectl \
         -o $HOME/.local/bin/kubectl
     chmod +x $HOME/.local/bin/kubectl
+
+MozC
+# https://wiki.archlinux.org/title/Mozc
+# Look at ~/.XModmap

@@ -6,6 +6,7 @@ mkdir -p $HOME/.bash/completion.d
 cp -r bash/* $HOME/.bash/
 cp bashrc $HOME/.bashrc
 cp profile $HOME/.profile
+cp Xmodmap $HOME/.Xmodmap
 
 # vim
 mkdir -p $HOME/.vim
@@ -39,3 +40,5 @@ cp -r ipython/* $HOME/.ipython
 
 mkdir -p $HOME/.local
 cp -r local/* $HOME/.local
+
+xmodmap $HOME/.Xmodmap
