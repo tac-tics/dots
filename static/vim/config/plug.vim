@@ -17,7 +17,7 @@ call plug#begin('~/.vim/plugged')
 " Plug 'ncm2/ncm2-bufword'
 " Plug 'ncm2/ncm2-path'
 
-Plug 'neovim/nvim-lspconfig', { 'commit': '6a33e9ba757245a300531e370c6b2ebe6e5a7097' }
+" Plug 'neovim/nvim-lspconfig', { 'commit': '6a33e9ba757245a300531e370c6b2ebe6e5a7097' }
 Plug 'junegunn/fzf', { 'commit': '052d17e66a3e6f9e9e61cec246d20a4dfdee6f71' }
 Plug 'junegunn/fzf.vim', { 'commit': 'cabfd44a8b1666e9b0c1b18f55646dd8ec25d0d9' }
 Plug 'tpope/vim-fugitive', { 'commit': '7bcfe539beee5fe8c542092732b6fd3786c6080e' }
