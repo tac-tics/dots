@@ -6,7 +6,6 @@ mkdir -p $HOME/.bash/completion.d
 cp -r bash/* $HOME/.bash/
 cp bashrc $HOME/.bashrc
 cp profile $HOME/.profile
-cp Xmodmap $HOME/.Xmodmap
 
 # vim
 mkdir -p $HOME/.vim
