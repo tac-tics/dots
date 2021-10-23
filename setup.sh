@@ -1,43 +1,44 @@
 #!/bin/bash
 
+set -e
+
+STATIC='static'
+
 # bash
 mkdir -p $HOME/.bash
 mkdir -p $HOME/.bash/completion.d
-cp -r bash/* $HOME/.bash/
-cp bashrc $HOME/.bashrc
-cp profile $HOME/.profile
+cp -r $STATIC/bash/* $HOME/.bash/
+cp $STATIC/bashrc $HOME/.bashrc
+cp $STATIC/profile $HOME/.profile
 
 # vim
 mkdir -p $HOME/.vim
 mkdir -p $HOME/.vim/bundle
 mkdir -p $HOME/.vim/undo
 chmod og-rwx $HOME/.vim/undo
-cp -r vim/* $HOME/.vim/
+cp -r $STATIC/vim/* $HOME/.vim/
 
 if [ ! -f "$HOME/.vim/local.vim" ]
 then
-    cp "vim/local.vim.tpl" "$HOME/.vim/local.vim"
+    cp $STATIC/"vim/local.vim.tpl" "$HOME/.vim/local.vim"
 fi
 
-
 # git
-cp gitconfig $HOME/.gitconfig
+cp $STATIC/gitconfig $HOME/.gitconfig
 
 # command line completion
-cp inputrc $HOME/.inputrc
+cp $STATIC/inputrc $HOME/.inputrc
 
-cp tmux.conf $HOME/.tmux.conf
+cp $STATIC/tmux.conf $HOME/.tmux.conf
 
 mkdir -p $HOME/.config
-cp -r config/* $HOME/.config
+cp -r $STATIC/config/* $HOME/.config
 
 mkdir -p $HOME/.docker
-cp -r docker/* $HOME/.docker
+cp -r $STATIC/docker/* $HOME/.docker
 
 mkdir -p $HOME/.ipython
-cp -r ipython/* $HOME/.ipython
+cp -r $STATIC/ipython/* $HOME/.ipython
 
 mkdir -p $HOME/.local
-cp -r local/* $HOME/.local
-
-xmodmap $HOME/.Xmodmap
+cp -r $STATIC/local/* $HOME/.local
