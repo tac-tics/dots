@@ -20,7 +20,7 @@ cd dots
 bash setup.sh
 
 bash installers/apt.sh
-bash installers/rust.sh
-bash installers/pyenv.sh
+#bash installers/rust.sh
+#bash installers/pyenv.sh
 
 bash installers/neovim.sh
