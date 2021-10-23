@@ -8,8 +8,6 @@ apt install -y git
 export PROJECTS=$HOME/projects
 mkdir $PROJECTS -p
 
-bash setup.sh
-
 cd $PROJECTS
 
 if [ ! -d dots ]
@@ -18,6 +16,8 @@ then
 fi
 
 cd dots
+
+bash setup.sh
 
 bash installers/apt.sh
 bash installers/rust.sh
