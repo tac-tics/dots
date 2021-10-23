@@ -3,18 +3,14 @@
 set -ex
 
 apt update
-apt install -y \
-    build-essential \
-    cmake \
-    libtool-bin \
-    pkg-config \
-    unzip \
-    git \
-    gettext
+apt install -y git
 
-mkdir projects -p
-export PROJECTS=$(realpath projects)
-cd projects
+export PROJECTS=$HOME/projects
+mkdir $PROJECTS -p
+
+bash setup.sh
+
+cd $PROJECTS
 
 if [ ! -d dots ]
 then
@@ -22,10 +18,9 @@ then
 fi
 
 cd dots
-bash setup.sh
-bash build_neovim.sh
 
-mkdir -p "$HOME/.vim/autoload"
-curl -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+bash installers/apt.sh
+bash installers/rust.sh
+bash installers/pyenv.sh
 
-$HOME/.local/neovim/bin/nvim --headless +PlugInstall +qall
+bash installers/neovim.sh

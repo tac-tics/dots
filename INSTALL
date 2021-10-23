@@ -1,14 +1,6 @@
-Setup
+Start Here
 
-    mkdir $HOME/projects
-
-
-Rustup
-
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-    cargo install ripgrep
-
+    bash curlables/setup.sh
 
 Docker
 
@@ -18,41 +10,9 @@ Docker
     sudo apt install docker-ce
     sudo systemctl status docker
 
-
-Random Installs
-
-    sudo apt-get install -y \
-        gcc \
-        tmux \
-#        neovim \
-
-Build dependency installs for neovim
-
-    sudo apt-get install -y \
-        cmake \
-        build-essential \
-        gettext \
-        libtool-bin \
-        libmsgpack-dev \
-        libuv1-dev
-
-        lua-luv-dev?
-        lua-lpeg-dev?
-        lua-mpack?
-        lua-bitop-de?
-
-# Call PlugInstall on vim from bash:
-# https://github.com/junegunn/vim-plug/issues/675
-
-	nvim --headless +PlugInstall +qall
-
 Kubernetes
 
     STABLE=$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)
     curl -fS https://storage.googleapis.com/kubernetes-release/release/$STABLE/bin/linux/amd64/kubectl \
         -o $HOME/.local/bin/kubectl
     chmod +x $HOME/.local/bin/kubectl
-
-MozC
-# https://wiki.archlinux.org/title/Mozc
-# Look at ~/.XModmap
