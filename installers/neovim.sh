@@ -3,8 +3,7 @@
 set -ex
 
 neovim_dir="$PROJECTS/neovim"
-neovim_commit="0a95549d66df63c06d775fcc329f7b63cbb46b2f"
-# neovim_commit="v0.4.4"
+neovim_commit="v0.5.0"
 skip_fetch=1
 prefix="$HOME/.local/neovim"
 
