@@ -14,8 +14,9 @@ alias dc='docker-compose'
 alias vm='VBoxManage'
 alias reload='source $HOME/.bashrc'
 
-function add-ssh-key() {
+function ssh-key() {
     eval `ssh-agent -s`
+    ssh-add -D
     ssh-add $1
 }
 
