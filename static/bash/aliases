@@ -4,28 +4,16 @@ then
     alias vi='nvim'
 fi
 
-alias less='less -R'
-alias hexdump='hexdump -C -v'
-alias gpg='gpg2'
-alias python='python3'
+#alias gpg='gpg2'
+#alias python='python3'
+#alias less='less -R'
 
-alias rg='rg --color=always'
-alias dc='docker-compose'
-alias vm='VBoxManage'
 alias reload='source $HOME/.bashrc'
 
 function ssh-key() {
     eval `ssh-agent -s`
     ssh-add -D
     ssh-add $1
-}
-
-function f() {
-    filename=$(fzf --height=10 --query="$1")
-    if [ -n "$filename" ]
-    then
-        vim $filename
-    fi
 }
 
 function p() {
@@ -51,69 +39,6 @@ _p_completion()
 }
 
 complete -F _p_completion p
-
-function t() {
-    if [ -z "$1" ]
-    then
-        cd "$HOME/tests"
-    else
-        if [ -n "$TMUX" ]
-        then
-            cd "$HOME/tests/$1" && \
-                tmux rename-window "$1"
-        else
-            cd "$HOME/tests/$1"
-        fi
-    fi
-}
-
-_t_completion()
-{
-    CURRENT_WORD=${COMP_WORDS[$COMP_CWORD]}
-    tests=$(ls -1 "$HOME/tests")
-    COMPREPLY=( $(compgen -W "$tests" "$CURRENT_WORD") )
-}
-
-complete -F _t_completion t
-
-function notes() {
-    while [[ $# -gt 0 ]]; do
-        key="$1"
-        case $key in
-        push)
-            git -C $HOME/projects/notes add .
-            git -C $HOME/projects/notes commit -m 'Update.'
-            git -C $HOME/projects/notes push
-            return 0
-        ;;
-        pull)
-            git -C $HOME/projects/notes pull
-            return 0
-        ;;
-        *)
-            echo "Unknown parameter $1"
-            return 1
-        esac
-    done
-    vim $HOME/projects/notes/notes.txt
-}
-
-
-function downloads() {
-    while [[ $# -gt 0 ]]; do
-        key="$1"
-        case $key in
-        --clear)
-            rm -rf $HOME/Downloads/*
-            shift
-        ;;
-        esac
-    done
-    ls $HOME/Downloads -1t | head -n 10
-}
-
-alias watch='watch -n1'
-
 
 function path() {
     for p in $(echo $PATH | sed 's/:/ /g')
