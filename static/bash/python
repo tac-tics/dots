@@ -18,8 +18,7 @@ function mkvirtualenv() {
     local ORANGE="\[\033[0;33m\]"
     local RESET="\[\033[0m\]"
     local DIRNAME=${PWD##*/}
-    virtualenv -p "$MKVIRTUALENV_PYTHON" .venv --prompt="${ORANGE}($DIRNAME)${RESET}"
+    virtualenv -p "$MKVIRTUALENV_PYTHON" .venv --prompt="$DIRNAME"
+#    virtualenv -p "$MKVIRTUALENV_PYTHON" .venv --prompt="${ORANGE}($DIRNAME)${RESET}"
     source .venv/bin/activate
 }
-
-export MYPYPATH=$HOME/projects/mypy-data/numpy-mypy
