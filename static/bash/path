@@ -1,16 +1,24 @@
-PATH=${PATH:+$PATH:}$HOME/.cargo/bin
-PATH=${PATH:+$PATH:}$HOME/.local/bin
+function prepend_path() {
+    export PATH=$1:$PATH
+}
+
+
+prepend_path "$HOME/.cargo/bin"
 
 for d in $(ls -1 "$HOME/.local")
 do
     local_dir="$HOME/.local/$d/bin"
     if [ -d "$local_dir" ]
     then
-        PATH="${PATH:+$PATH:}$local_dir"
+        prepend_path "$local_dir"
     fi
 done
 
-export PATH
+if [ -d "$GOPATH" ]
+then
+    prepend_path $GOPATH/bin
+fi
+
+prepend_path "$HOME/.local/bin"
 
 export PROJECTS=$HOME/projects
-export RISCV=$HOME/.local/riscv
