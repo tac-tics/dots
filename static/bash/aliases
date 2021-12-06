@@ -31,6 +31,21 @@ function p() {
     fi
 }
 
+function t() {
+    if [ -z "$1" ]
+    then
+        cd "$HOME/tests"
+    else
+        if [ -n "$TMUX" ]
+        then
+            cd "$HOME/tests/$1" && \
+                tmux rename-window "$1"
+        else
+            cd "$HOME/tests/$1"
+        fi
+    fi
+}
+
 _p_completion()
 {
     CURRENT_WORD=${COMP_WORDS[$COMP_CWORD]}
