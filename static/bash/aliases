@@ -4,6 +4,11 @@ then
     alias vi='nvim'
 fi
 
+if [ -f $(which python) ]
+then
+    alias python=python3
+fi
+
 #alias gpg='gpg2'
 #alias python='python3'
 #alias less='less -R'
