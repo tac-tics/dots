@@ -8,7 +8,7 @@ nnoremap <leader>; ,
 noremap <leader>w :call RStrip()<cr>:echo "Stripped trailing whitespace."<cr>
 
 " Requires Fugitive
-nnoremap <leader>gb :Gblame<cr>
+nnoremap <leader>gb :Git blame<cr>
 
 " Requires fzf.vim
 nnoremap <leader>r :Rg<cr>
