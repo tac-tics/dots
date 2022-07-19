@@ -25,6 +25,7 @@ fi
 
 # git
 cp $STATIC/gitconfig $HOME/.gitconfig
+cp $STATIC/gitignore $HOME/.gitignore
 
 # command line completion
 cp $STATIC/inputrc $HOME/.inputrc

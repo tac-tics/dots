@@ -3,6 +3,7 @@
 
 [core]
     editor = nvim
+    excludesfile = ~/.gitignore
 
 [alias]
     graph = log --graph --decorate
