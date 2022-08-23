@@ -11,18 +11,6 @@ cp -r $STATIC/bash/* $HOME/.bash/
 cp $STATIC/bashrc $HOME/.bashrc
 cp $STATIC/profile $HOME/.profile
 
-# vim
-mkdir -p $HOME/.vim
-mkdir -p $HOME/.vim/bundle
-mkdir -p $HOME/.vim/undo
-chmod og-rwx $HOME/.vim/undo
-cp -r $STATIC/vim/* $HOME/.vim/
-
-if [ ! -f "$HOME/.vim/local.vim" ]
-then
-    cp $STATIC/"vim/local.vim.tpl" "$HOME/.vim/local.vim"
-fi
-
 # git
 cp $STATIC/gitconfig $HOME/.gitconfig
 cp $STATIC/gitignore $HOME/.gitignore
