@@ -24,6 +24,9 @@ vim.keymap.set('n', '<leader>n', function() vim.cmd(':NERDTreeFocus') end)
 --vim.keymap.set('n', '<C-t>', function() vim.cmd(':NERDTree') end)
 vim.keymap.set('n', '<C-t>', function() vim.cmd(':NERDTreeToggle') end)
 vim.keymap.set('n', '<C-f>', function() vim.cmd(':NERDTreeFind') end)
+vim.keymap.set('n', '<Tab>', function() vim.cmd(':bn') end)
+vim.keymap.set('n', '<S-Tab>', function() vim.cmd(':bp') end)
+
 
 vim.cmd [[
     autocmd VimEnter * NERDTree | wincmd p

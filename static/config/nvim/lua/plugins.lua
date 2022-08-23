@@ -17,6 +17,7 @@ packer.startup(function(use)
     use 'junegunn/fzf.vim'
     use 'machakann/vim-highlightedyank'
     use 'vim-airline/vim-airline'
+    use 'bling/vim-bufferline'
 
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-buffer'
