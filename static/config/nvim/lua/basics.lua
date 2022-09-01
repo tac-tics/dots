@@ -78,6 +78,16 @@ vim.cmd [[
 vim.o.undolevels = 1000
 vim.o.undoreload = 10000
 
+
+vim.cmd [[
+    set undofile
+]]
+vim.cmd [[
+    set undodir=$HOME/.vim/undo
+]]
+--set undolevels=1000
+--set undoreload=10000
+
 --" Restore cursor to last known position when opening a file.
 vim.cmd [[
     augroup RestoreCursor
