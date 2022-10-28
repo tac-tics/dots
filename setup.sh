@@ -26,6 +26,10 @@ cp -r $STATIC/config/* $HOME/.config
 mkdir -p $HOME/.docker
 cp -r $STATIC/docker/* $HOME/.docker
 
+# podman
+mkdir -p $HOME/.config/containers
+cp -r $STATIC/config/containers/* $HOME/.config/containers
+
 mkdir -p $HOME/.ipython
 cp -r $STATIC/ipython/* $HOME/.ipython
 
