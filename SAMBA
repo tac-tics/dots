@@ -1,0 +1,10 @@
+Create $HOME/.config/smbcredentials file:
+
+      username=tac-tics
+      password=...
+
+Edit /etc/fstab
+
+    //192.168.0.235/homes/tac-tics/Drive/data  /data cifs uid=1000,credentials=/home/tac-tics/.config/smbcredentials,users 0 0
+
+
