@@ -16,7 +16,7 @@ vim.o.backspace = 'indent,eol,start'
 -- """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 -- " Status line and gutter
 -- """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-vim.o.updatetime = 100
+--vim.o.updatetime = 100
 vim.o.number = true
 vim.o.numberwidth = 6
 vim.o.laststatus = 2
