@@ -4,6 +4,11 @@ then
     alias vi='nvim'
 fi
 
+# The -2 flag is required to force 256-color mode
+# Without this, vim breaks in PuTTY for some stupid reason
+# https://stackoverflow.com/questions/19771683/bad-colorscheme-in-vim-running-on-puttytmux
+alias tmux='tmux -2'
+
 if [ -f $(which python) ]
 then
     alias python=python3
