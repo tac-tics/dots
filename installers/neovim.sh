@@ -42,7 +42,12 @@ cmake \
 make
 make install
 
-mkdir -p "$HOME/.vim/autoload"
-curl -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+#mkdir -p "$HOME/.vim/autoload"
+#curl -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim" ]
+then
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim $HOME/.local/share/nvim/site/pack/packer/start/packer.nvim
+fi
 
 $HOME/.local/neovim/bin/nvim --headless +PackerInstall +qall

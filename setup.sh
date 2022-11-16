@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -ex
 
 STATIC='static'
 
@@ -20,9 +20,6 @@ cp $STATIC/inputrc $HOME/.inputrc
 
 cp $STATIC/tmux.conf $HOME/.tmux.conf
 
-mkdir -p $HOME/.config
-cp -r $STATIC/config/* $HOME/.config
-
 mkdir -p $HOME/.docker
 cp -r $STATIC/docker/* $HOME/.docker
 
@@ -36,7 +33,10 @@ cp -r $STATIC/ipython/* $HOME/.ipython
 mkdir -p $HOME/.local
 cp -r $STATIC/local/* $HOME/.local
 
-if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim" ]
+if [ ! -e "$HOME/.config/nvim" ]
 then
-    git clone --depth 1 https://github.com/wbthomason/packer.nvim $HOME/.local/share/nvim/site/pack/packer/start/packer.nvim
+    ln -s $(realpath $STATIC/config/nvim) $HOME/.config/
 fi
+
+mkdir -p $HOME/.config/containers
+cp -r $STATIC/config/containers $HOME/.config/containers
