@@ -28,9 +28,9 @@ vim.keymap.set('n', '<Tab>', function() vim.cmd(':bn') end)
 vim.keymap.set('n', '<S-Tab>', function() vim.cmd(':bp') end)
 
 
-vim.cmd [[
-    autocmd VimEnter * NERDTree | wincmd p
-]]
+--vim.cmd [[
+--    autocmd VimEnter * NERDTree | wincmd p
+--]]
 
 -- Exit Vim if NERDTree is the only window remaining in the only tab.
 vim.cmd [[
