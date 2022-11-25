@@ -26,6 +26,8 @@ vim.keymap.set('n', '<C-t>', function() vim.cmd(':NERDTreeToggle') end)
 vim.keymap.set('n', '<C-f>', function() vim.cmd(':NERDTreeFind') end)
 vim.keymap.set('n', '<Tab>', function() vim.cmd(':bn') end)
 vim.keymap.set('n', '<S-Tab>', function() vim.cmd(':bp') end)
+vim.keymap.set('i', '<C-J>', function() vim.cmd(':stopinsert') end)
+vim.keymap.set('n', '<C-J>', function() end)
 
 
 --vim.cmd [[
