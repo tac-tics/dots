@@ -1,7 +1,0 @@
-complete_tmux () {
-    CURRENT_WORD=${COMP_WORDS[$COMP_CWORD]}
-    # WORDS="attach list-sessions new-session"
-    COMPREPLY=( $(compgen -W "attach list-sessions new-session" $CURRENT_WORD) )
-}
-
-complete -F complete_tmux tmux
