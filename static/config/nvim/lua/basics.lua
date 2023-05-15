@@ -17,14 +17,9 @@ vim.o.backspace = 'indent,eol,start'
 -- " Status line and gutter
 -- """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 --vim.o.updatetime = 100
-vim.o.number = true
 vim.o.numberwidth = 6
 vim.o.laststatus = 2
 vim.o.colorcolumn = 101
-
-vim.cmd [[
-    set signcolumn=yes
-]]
 
 vim.cmd [[
     hi StatusLine ctermfg=Black ctermbg=Grey
@@ -37,6 +32,32 @@ vim.cmd [[
 vim.cmd [[
     highlight ColorColumn cterm=bold ctermbg=Black
 ]]
+
+vim.cmd [[
+    set mouse=
+]]
+
+function set_linenos(enabled)
+    if enabled then
+        vim.o.number = true
+        vim.cmd [[
+            set signcolumn=yes
+        ]]
+    else
+        vim.o.number = false
+        vim.cmd [[
+            set signcolumn=no
+        ]]
+    end
+end
+
+set_linenos(true)
+
+function toggle_linenos()
+    set_linenos(not vim.o.number)
+end
+
+vim.fn.toggle_linenos = toggle_linenos
 
 
 -- """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

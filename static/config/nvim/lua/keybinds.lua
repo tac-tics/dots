@@ -29,6 +29,8 @@ vim.keymap.set('n', '<S-Tab>', function() vim.cmd(':bp') end)
 vim.keymap.set('i', '<C-J>', function() vim.cmd(':stopinsert') end)
 vim.keymap.set('n', '<C-J>', function() end)
 
+vim.keymap.set('n', '<C-L>', vim.fn.toggle_linenos)
+
 
 --vim.cmd [[
 --    autocmd VimEnter * NERDTree | wincmd p
