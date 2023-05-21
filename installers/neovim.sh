@@ -39,7 +39,7 @@ cmake \
     -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     ..
 
-make
+make -j11
 make install
 
 #mkdir -p "$HOME/.vim/autoload"

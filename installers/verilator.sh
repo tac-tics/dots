@@ -10,5 +10,5 @@ cd verilator
 git checkout $commit
 autoconf
 ./configure --prefix=$prefix
-make
+make -j10
 make install
