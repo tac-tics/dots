@@ -14,10 +14,6 @@ then
     alias python=python3
 fi
 
-#alias gpg='gpg2'
-#alias python='python3'
-#alias less='less -R'
-
 alias reload='source $HOME/.bashrc'
 
 function ssh-key() {
@@ -25,6 +21,11 @@ function ssh-key() {
     ssh-add -D
     ssh-add $1
 }
+
+if [ -d "$HOME/repos" ]
+then
+    export REPOS=$HOME/repos
+fi
 
 function p() {
     if [ -z "$1" ]
