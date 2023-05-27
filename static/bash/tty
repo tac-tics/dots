@@ -1,3 +1,0 @@
-
-# Prevent Ctrl+S from locking terminal.
-stty stop '' &> /dev/null
