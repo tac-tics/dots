@@ -15,6 +15,7 @@ then
 fi
 
 alias reload='source $HOME/.bashrc'
+alias ls='ls --color=auto'
 
 function ssh-key() {
     eval `ssh-agent -s`
