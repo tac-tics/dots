@@ -44,18 +44,13 @@ function p() {
 }
 
 function t() {
-    if [ -z "$1" ]
-    then
-        cd "$HOME/tests"
-    else
-        if [ -n "$TMUX" ]
-        then
-            cd "$HOME/tests/$1" && \
-                tmux rename-window "$1"
-        else
-            cd "$HOME/tests/$1"
-        fi
+    date=$(date +%Y-%m-%d)
+
+    if [ ! -d "$HOME/tests/$date" ]; then
+        mkdir -p "$HOME/tests/$date"
     fi
+
+    cd "$HOME/tests/$date"
 }
 
 _p_completion()
