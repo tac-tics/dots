@@ -1,0 +1,87 @@
+#!/usr/bin/env python3
+
+import re
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+
+def get_github_ssh_keys():
+    results = []
+    ssh_dir = Path(os.path.expanduser('~/.ssh'))
+
+    for filename in os.listdir(ssh_dir):
+        if filename.startswith('id_rsa.github.') and not filename.endswith('.pub'):
+            results.append(ssh_dir / filename)
+
+    return results
+
+def get_origin_remote_url():
+    proc = subprocess.Popen([
+            'git',
+            'remote',
+            '-vv',
+        ],
+        stdout=subprocess.PIPE
+    )
+    for line in proc.stdout.readlines():
+        if line.startswith(b'origin\t') and line.endswith(b' (push)\n'):
+            return line[len(b'origin\t'):-len(b' (push)\n')].decode()
+
+    raise Exception('No origin remote')
+
+
+def get_github_username_from_url(url):
+    match = re.search('git@github.com:([^/]+)/.*', url)
+    return match[1]
+
+
+def get_key_path_from_remote_url(url):
+    username = get_github_username_from_url(url)
+
+    for filename in get_github_ssh_keys():
+        if str(filename).endswith(username):
+            return filename
+
+    raise Exception('No key for remote: ' + url)
+
+
+def add_key(key_filepath):
+    print(key_filepath)
+    proc = subprocess.Popen([
+            'ssh-agent',
+            '-s',
+        ],
+        stdout=subprocess.PIPE
+    )
+
+    env_vars = {}
+
+    for line in proc.stdout.readlines():
+        line = line.decode()
+        if line.startswith('SSH_AGENT_PID=') or line.startswith('SSH_AUTH_SOCK='):
+            end_idx = line.index(';')
+            line = line[:end_idx].strip()
+            key, val = line.split('=')
+            env_vars[key] = val
+
+    proc = subprocess.Popen([
+            'ssh-add',
+            str(key_filepath),
+        ],
+        env=env_vars,
+        stdout=subprocess.PIPE
+    )
+    for line in proc.stdout.readlines():
+        print(line)
+
+
+def main():
+    remote_url = get_origin_remote_url()
+    key_filepath = get_key_path_from_remote_url(remote_url)
+    add_key(key_filepath)
+
+
+if __name__ == '__main__':
+    main()
