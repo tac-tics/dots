@@ -3,8 +3,8 @@
 set -ex
 
 neovim_dir="$PROJECTS/neovim"
-neovim_commit="v0.7.2"
-skip_fetch=1
+neovim_commit="v0.10.0"
+skip_fetch=0
 prefix="$HOME/.local/neovim"
 
 if [ ! -d $neovim_dir ]
