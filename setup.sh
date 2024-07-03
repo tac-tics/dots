@@ -13,8 +13,7 @@ function link() {
 STATIC=$(realpath 'static')
 
 # bash
-mkdir -p $HOME/.bash
-link $STATIC/bash/* $HOME/.bash/
+link $STATIC/bash $HOME/.bash
 cp $STATIC/bashrc $HOME/.bashrc
 cp $STATIC/profile $HOME/.profile
 
